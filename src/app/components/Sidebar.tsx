@@ -10,7 +10,7 @@ export default function Sidebar() {
   const toggleMenu = () => setIsOpen(!isOpen)
 
   return (
-    <div className="relative flex h-full flex-col p-12">
+    <div className="relative flex min-h-full w-full flex-col p-4 lg:p-12">
       {/* Overlay para fechar ao clicar fora */}
       {isOpen && (
         <div
@@ -19,7 +19,7 @@ export default function Sidebar() {
         />
       )}
       {/* Botão Burger */}
-      <div className="z-50 cursor-pointer" onClick={toggleMenu}>
+      <div className="z-50 mt-5 flex cursor-pointer" onClick={toggleMenu}>
         <Image
           src="/images/icons/burger.svg"
           alt="Menu"
@@ -35,36 +35,52 @@ export default function Sidebar() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
-            className="absolute top-24 left-12 z-40 flex flex-col gap-2"
+            className="absolute top-24 z-40 flex flex-col gap-2 lg:top-24 lg:left-12 lg:mt-6"
           >
-            <a
-              href="#inicio"
-              onClick={toggleMenu}
-              className="hover:text-primary text-2xl font-medium transition-colors"
+            <button
+              onClick={() => {
+                document
+                  .getElementById('inicio')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+                setIsOpen(false)
+              }}
+              className="hover:text-primary hidden text-left text-2xl font-medium transition-colors lg:block"
             >
-              Início
-            </a>
-            <a
-              href="#sobre"
-              onClick={toggleMenu}
-              className="hover:text-primary text-2xl font-medium transition-colors"
+              Inicío
+            </button>
+            <button
+              onClick={() => {
+                document
+                  .getElementById('sobre')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+                setIsOpen(false)
+              }}
+              className="hover:text-primary text-left text-2xl font-medium transition-colors"
             >
               Sobre
-            </a>
-            <a
-              href="#projetos"
-              onClick={toggleMenu}
-              className="hover:text-primary text-2xl font-medium transition-colors"
+            </button>
+            <button
+              onClick={() => {
+                document
+                  .getElementById('projetos')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+                setIsOpen(false)
+              }}
+              className="hover:text-primary text-left text-2xl font-medium transition-colors"
             >
               Projetos
-            </a>
-            <a
-              href="#tecnologias"
-              onClick={toggleMenu}
-              className="hover:text-primary text-2xl font-medium transition-colors"
+            </button>
+            <button
+              onClick={() => {
+                document
+                  .getElementById('tecnologias')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+                setIsOpen(false)
+              }}
+              className="hover:text-primary text-left text-2xl font-medium transition-colors"
             >
               Tecnologias
-            </a>
+            </button>
           </motion.nav>
         )}
       </AnimatePresence>

@@ -14,16 +14,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className="scroll-smooth">
-      <body className="overflow-hidden">
-        {/* Container Principal */}
-        <div className="flex h-screen w-screen flex-col lg:flex-row">
-          {/* Lado Esquerdo: Fixo no Desktop */}
-          <aside className="bg-background w-full border-b border-zinc-800 lg:h-screen lg:w-1/2 lg:border-r">
+      <body className="overflow-auto">
+        {/* Desktop: sidebar fixo + conteúdo rolável */}
+        <div className="hidden h-screen w-full lg:flex">
+          <aside className="bg-background w-1/2 border-r border-zinc-800">
             <Sidebar />
           </aside>
+          <main className="w-1/2 overflow-y-auto">{children}</main>
+        </div>
 
-          {/* Lado Direito: Rolevél (Scrollable) */}
-          <main className="h-screen w-full lg:w-1/2">{children}</main>
+        {/* Mobile: sidebar como section rolável + conteúdo embaixo */}
+        <div className="lg:hidden">
+          <section className="bg-background h-screen w-full overflow-y-auto">
+            <Sidebar />
+          </section>
+          <main className="w-full">{children}</main>
         </div>
       </body>
     </html>

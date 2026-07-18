@@ -8,7 +8,10 @@ export default function Home() {
   return (
     <div className="h-screen snap-y snap-mandatory overflow-y-auto scroll-smooth">
       {/* SEÇÃO INÍCIO */}
-      <section id="inicio" className="relative h-screen w-full snap-start">
+      <section
+        id="inicio"
+        className="relative hidden h-screen w-full snap-start lg:block"
+      >
         <Image
           src="/images/capa.jpg"
           alt="Foto de capa"
