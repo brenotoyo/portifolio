@@ -2,8 +2,10 @@ export const projects = [
   {
     id: 'p1',
     title: 'Ânima Virtus',
-    description:
-      'Uma página institucional, que apresenta o trabalho de uma escola de ballet.',
+    description: {
+      span: 'Uma página institucional,',
+      text: ' que apresenta o trabalho de uma escola de ballet.',
+    },
     image: '/images/projects/animavirtus.png',
     repoUrl: 'https://github.com/brenotoyo/AnimaVirtus',
     demoUrl: 'https://anima-virtus.vercel.app',
@@ -12,8 +14,10 @@ export const projects = [
   {
     id: 'p2',
     title: 'Lista de contatos',
-    description:
-      'Uma lista de contatos, onde é possível, adicionar, editar ou exluir contatos.',
+    description: {
+      span: 'Uma lista de contatos,',
+      text: ' onde é possível, adicionar, editar ou exluir contatos.',
+    },
     image: '/images/projects/lista.png',
     repoUrl: 'https://github.com/brenotoyo/Projeto-5---Lista-de-contatos',
     demoUrl: 'https://projeto-5-lista-de-contatos.vercel.app',
@@ -22,8 +26,10 @@ export const projects = [
   {
     id: 'p3',
     title: 'efood',
-    description:
-      'Um cardário de restaurantes e seu principais pratos para pedido.',
+    description: {
+      span: 'Um cardário de restaurantes',
+      text: ' e seu principais pratos para pedido.',
+    },
     image: '/images/projects/efood.png',
     repoUrl: 'https://github.com/brenotoyo/efood',
     demoUrl: 'https://efood-gules-two.vercel.app',

@@ -55,20 +55,23 @@ export default function SectionTecnologias() {
   })
 
   return (
-    <div ref={ref}>
-      {/* Header com título e explicação sobre a seçaõ */}
-      <header className="mb-12">
-        <h3 className="text-background mb-16 text-xl font-bold">
-          &lt;Tecnologias /&gt;
-        </h3>
-        <h2 className="text-background text-4xl font-bold">Hard Skills</h2>
-        <p className="mt-3 max-w-2xl text-zinc-400">
+    <div className="relative w-full" ref={ref}>
+      {/* Título da Seção */}
+      <h3 className="text-background mb-10 text-sm font-bold lg:mb-24 lg:text-xl">
+        {/* Header com título e explicação sobre a seçaõ */}
+        &lt;Tecnologias /&gt;
+      </h3>
+      <header className="mb-6 text-center lg:mb-12">
+        <h2 className="text-background mb-2 text-3xl font-bold lg:mb-5 lg:text-start lg:text-4xl">
+          Hard Skills
+        </h2>
+        <p className="max-w-2xl text-base text-zinc-400 lg:text-start lg:text-base">
           Linguagens, frameworks e ferramentas que tenho conhecimento e já
           utilizei em alguma aplicação.
         </p>
       </header>
       {/* Containers das categorias que listam as tecnologias */}
-      <div className="flex gap-20">
+      <div className="flex flex-col gap-3 lg:flex-row lg:gap-20">
         <CategoryLine
           title="Linguagens"
           items={LANGUAGES}
@@ -80,7 +83,7 @@ export default function SectionTecnologias() {
           onHover={setHovered}
         />
       </div>
-      <div className="mt-20">
+      <div className="mt-3 lg:mt-20">
         <CategoryLine
           title="Ferramentas & Outros"
           items={TOOLS}
@@ -88,8 +91,8 @@ export default function SectionTecnologias() {
         />
       </div>
       {/* Explanação do uso das tecnologias */}
-      {isInView ? (
-        <div className="pointer-events-none fixed bottom-10 w-full max-w-3xl px-6">
+      {isInView && (
+        <div className="pointer-events-none absolute -bottom-28 left-1/2 w-full max-w-sm -translate-x-1/2 px-6 lg:-bottom-52 lg:max-w-3xl">
           <div
             role="status"
             aria-live="polite"
@@ -100,16 +103,18 @@ export default function SectionTecnologias() {
             }`}
           >
             {hovered ? (
-              <p className="whitespace-pre-line text-white">{hovered.desc}</p>
+              <p className="text-sm whitespace-pre-line text-white lg:text-base">
+                {hovered.desc}
+              </p>
             ) : (
-              <p className="text-zinc-400">
-                Passe o mouse sobre uma tecnologia para saber mais.
+              <p className="flex justify-center gap-1 text-sm text-zinc-400 lg:text-base">
+                <span className="hidden lg:block">Passe o mouse sobre</span>
+                <span className="lg:hidden">Aperte</span> uma tecnologia para
+                saber mais.
               </p>
             )}
           </div>
         </div>
-      ) : (
-        ''
       )}
     </div>
   )

@@ -25,9 +25,6 @@ export default function RootLayout({
 
         {/* Mobile: sidebar como section rolável + conteúdo embaixo */}
         <div className="lg:hidden">
-          <section className="bg-background h-screen w-full overflow-y-auto">
-            <Sidebar />
-          </section>
           <main className="w-full">{children}</main>
         </div>
       </body>

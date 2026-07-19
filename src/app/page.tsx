@@ -3,6 +3,7 @@ import { ChevronsDown } from 'lucide-react'
 import SectionSobre from './components/SectionSobre'
 import SectionProjects from './components/SectionProjects'
 import SectionTech from './components/SectionTech'
+import Sidebar from './components/Sidebar'
 
 export default function Home() {
   return (
@@ -31,11 +32,17 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      {/* SEÇÃO SIDEBAR */}
+      <section
+        id="home"
+        className="bg-background block h-screen w-full snap-start lg:hidden"
+      >
+        <Sidebar />
+      </section>
       {/* SEÇÃO SOBRE */}
       <section
         id="sobre"
-        className="relative isolate h-screen w-full snap-start bg-white p-12"
+        className="relative isolate h-screen w-full snap-start bg-white p-4 lg:p-12"
       >
         <SectionSobre />
         {/* BACKGROUND IMAGE */}
@@ -53,14 +60,14 @@ export default function Home() {
       {/* SEÇÃO PROJETOS */}
       <section
         id="projetos"
-        className="h-screen w-full snap-start bg-zinc-800 p-12"
+        className="h-screen w-full snap-start bg-zinc-800 p-4 lg:p-12"
       >
         <SectionProjects />
       </section>
       {/* SEÇÃO TECNOLOGIAS */}
       <section
         id="tecnologias"
-        className="relative isolate h-screen w-full snap-start bg-white p-12"
+        className="relative isolate h-screen w-full snap-start bg-white p-4 lg:p-12"
       >
         <SectionTech />
         <div className="absolute inset-0 -z-10">

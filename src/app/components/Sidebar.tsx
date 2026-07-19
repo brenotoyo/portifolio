@@ -37,6 +37,7 @@ export default function Sidebar() {
             exit={{ opacity: 0, x: -20 }}
             className="absolute top-24 z-40 flex flex-col gap-2 lg:top-24 lg:left-12 lg:mt-6"
           >
+            {/* navegação inicio em desktop */}
             <button
               onClick={() => {
                 document
@@ -45,6 +46,18 @@ export default function Sidebar() {
                 setIsOpen(false)
               }}
               className="hover:text-primary hidden text-left text-2xl font-medium transition-colors lg:block"
+            >
+              Inicío
+            </button>
+            {/* navegação inicio em mobile */}
+            <button
+              onClick={() => {
+                document
+                  .getElementById('home')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+                setIsOpen(false)
+              }}
+              className="hover:text-primary block text-left text-2xl font-medium transition-colors lg:hidden"
             >
               Inicío
             </button>
@@ -86,7 +99,7 @@ export default function Sidebar() {
       </AnimatePresence>
       {/* Conteúdo Principal (Texto) */}
       <div
-        className={`transition-opacity duration-300 ${isOpen ? 'pointer-events-none opacity-20' : 'opacity-100'} mt-44`}
+        className={`transition-opacity duration-300 ${isOpen ? 'pointer-events-none opacity-20' : 'opacity-100'} mt-24 lg:mt-44`}
       >
         <h1 className="text-4xl font-bold tracking-tight">
           Olá! Me chamo Breno Kazuo e tenho 25 anos.
