@@ -35,14 +35,14 @@ export default function Home() {
       {/* SEÇÃO SIDEBAR */}
       <section
         id="home"
-        className="bg-background block h-screen w-full snap-start lg:hidden"
+        className="bg-background block min-h-dvh w-full snap-start lg:hidden"
       >
         <Sidebar />
       </section>
       {/* SEÇÃO SOBRE */}
       <section
         id="sobre"
-        className="relative isolate h-screen w-full snap-start bg-white p-4 lg:p-12"
+        className="relative isolate min-h-dvh w-full snap-start bg-white p-4 lg:p-12"
       >
         <SectionSobre />
         {/* BACKGROUND IMAGE */}
