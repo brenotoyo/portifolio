@@ -105,7 +105,7 @@ export default function SectionTecnologias() {
       </div>
       {/* Explanação do uso das tecnologias */}
       {isInView && (
-        <div className="pointer-events-none absolute -bottom-5 left-1/2 w-[min(100%,1024px)] -translate-x-1/2 transform px-6 lg:-bottom-24 lg:max-w-3xl">
+        <div className="pointer-events-none absolute bottom-3 left-1/2 w-[min(100%,1024px)] -translate-x-1/2 transform px-6 lg:-bottom-24 lg:max-w-3xl">
           <div
             role="status"
             aria-live="polite"
