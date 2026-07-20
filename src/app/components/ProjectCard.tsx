@@ -17,7 +17,7 @@ type Project = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950">
+    <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950">
       {project.image ? (
         <div className="relative h-24 w-full lg:h-44">
           <Image
@@ -33,7 +33,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
       )}
 
-      <div className="p-3 lg:p-6">
+      <div className="flex min-h-45 grow flex-col p-1 lg:p-6">
         <h3 className="mb-2 text-base font-bold text-white lg:text-2xl">
           {project.title}
         </h3>
@@ -57,7 +57,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             ))}
           </div>
         )}
-        <div className="flex gap-2 lg:gap-3">
+        <div className="mt-auto mb-2 flex justify-center gap-1 lg:gap-3">
           {project.demoUrl && (
             <a
               href={project.demoUrl}

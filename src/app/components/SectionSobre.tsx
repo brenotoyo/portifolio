@@ -1,13 +1,13 @@
 export default function SectionSobre() {
   return (
-    <div className="relative flex w-full flex-col">
-      <h3 className="text-background mb-10 text-sm font-bold lg:mb-16 lg:text-xl">
+    <div className="relative flex h-dvh w-full flex-col">
+      <h3 className="text-background mb-3 text-xs font-bold lg:mb-16 lg:text-xl">
         {/* Título da Seção */}
         &lt;SobreMim /&gt;
       </h3>
       {/* Primeiro Bloco: Alinhado à Esquerda */}
       <div className="mb-20 w-full self-start lg:mb-40 lg:w-2/3">
-        <h2 className="text-background mb-3 text-center text-3xl font-bold lg:mb-6 lg:text-start lg:text-5xl">
+        <h2 className="text-background mb-3 text-center text-2xl font-bold lg:mb-6 lg:text-start lg:text-5xl">
           Momento atual
         </h2>
         <p className="text-base leading-relaxed text-zinc-400 lg:indent-8 lg:text-xl">
@@ -20,7 +20,7 @@ export default function SectionSobre() {
       </div>
       {/* Segundo Bloco: Alinhado à Direita */}
       <div className="w-full self-end lg:w-2/3">
-        <h2 className="text-background mb-3 text-center text-3xl font-bold lg:mb-6 lg:text-5xl">
+        <h2 className="text-background mb-3 text-center text-2xl font-bold lg:mb-6 lg:text-5xl">
           Formação
         </h2>
         <p className="text-base leading-relaxed text-zinc-400 lg:indent-8 lg:text-xl">

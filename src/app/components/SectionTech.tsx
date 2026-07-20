@@ -19,7 +19,9 @@ function CategoryLine({
   return (
     <div className="mb-12 w-full text-center">
       {/* Título da categoria */}
-      <h4 className="text-background mb-8 text-2xl font-semibold">{title}</h4>
+      <h4 className="text-background mb-8 text-xl font-semibold lg:text-2xl">
+        {title}
+      </h4>
       {/* Lista de categorias */}
       <div className="flex items-center">
         {/* Para cada item cria uma div com imagem e texto */}
@@ -34,8 +36,15 @@ function CategoryLine({
             onFocus={() => onHover(tech)}
             onBlur={() => onHover(null)}
           >
-            <Image src={tech.icon} alt={tech.name} width={28} height={28} />
-            <span className="text-background truncate text-sm font-medium">
+            <div className="relative h-5 w-5 lg:h-7 lg:w-7">
+              <Image
+                src={tech.icon}
+                alt={tech.name}
+                fill
+                className="object-contain"
+              />
+            </div>
+            <span className="text-background truncate text-xs font-medium lg:text-sm">
               {tech.name}
             </span>
           </div>
@@ -57,21 +66,21 @@ export default function SectionTecnologias() {
   return (
     <div className="relative w-full" ref={ref}>
       {/* Título da Seção */}
-      <h3 className="text-background mb-10 text-sm font-bold lg:mb-24 lg:text-xl">
+      <h3 className="text-background mb-3 text-xs font-bold lg:mb-24 lg:text-xl">
         {/* Header com título e explicação sobre a seçaõ */}
         &lt;Tecnologias /&gt;
       </h3>
       <header className="mb-6 text-center lg:mb-12">
-        <h2 className="text-background mb-2 text-3xl font-bold lg:mb-5 lg:text-start lg:text-4xl">
+        <h2 className="text-background mb-2 text-2xl font-bold lg:mb-5 lg:text-start lg:text-4xl">
           Hard Skills
         </h2>
-        <p className="max-w-2xl text-base text-zinc-400 lg:text-start lg:text-base">
+        <p className="max-w-2xl text-sm text-zinc-400 lg:text-start lg:text-base">
           Linguagens, frameworks e ferramentas que tenho conhecimento e já
           utilizei em alguma aplicação.
         </p>
       </header>
       {/* Containers das categorias que listam as tecnologias */}
-      <div className="flex flex-col gap-3 lg:flex-row lg:gap-20">
+      <div className="flex flex-col gap-1 lg:flex-row lg:gap-20">
         <CategoryLine
           title="Linguagens"
           items={LANGUAGES}
@@ -83,7 +92,7 @@ export default function SectionTecnologias() {
           onHover={setHovered}
         />
       </div>
-      <div className="mt-3 lg:mt-20">
+      <div className="mt-1 lg:mt-20">
         <CategoryLine
           title="Ferramentas & Outros"
           items={TOOLS}
@@ -92,7 +101,7 @@ export default function SectionTecnologias() {
       </div>
       {/* Explanação do uso das tecnologias */}
       {isInView && (
-        <div className="pointer-events-none absolute -bottom-28 left-1/2 w-full max-w-sm -translate-x-1/2 px-6 lg:-bottom-52 lg:max-w-3xl">
+        <div className="pointer-events-none absolute -bottom-20 left-1/2 w-full -translate-x-1/2 px-6 lg:-bottom-52 lg:max-w-3xl">
           <div
             role="status"
             aria-live="polite"
@@ -107,7 +116,7 @@ export default function SectionTecnologias() {
                 {hovered.desc}
               </p>
             ) : (
-              <p className="flex justify-center gap-1 text-sm text-zinc-400 lg:text-base">
+              <p className="flex justify-center gap-1 text-xs text-zinc-400 lg:text-base">
                 <span className="hidden lg:block">Passe o mouse sobre</span>
                 <span className="lg:hidden">Aperte</span> uma tecnologia para
                 saber mais.

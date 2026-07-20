@@ -3,8 +3,8 @@ export const projects = [
     id: 'p1',
     title: 'Ânima Virtus',
     description: {
-      span: 'Uma página institucional,',
-      text: ' que apresenta o trabalho de uma escola de ballet.',
+      span: 'Uma página institucional',
+      text: ', que apresenta o trabalho de uma escola de ballet.',
     },
     image: '/images/projects/animavirtus.png',
     repoUrl: 'https://github.com/brenotoyo/AnimaVirtus',
@@ -15,8 +15,8 @@ export const projects = [
     id: 'p2',
     title: 'Lista de contatos',
     description: {
-      span: 'Uma lista de contatos,',
-      text: ' onde é possível, adicionar, editar ou exluir contatos.',
+      span: 'Uma lista de contatos',
+      text: ', onde é possível, adicionar, editar ou exluir contatos.',
     },
     image: '/images/projects/lista.png',
     repoUrl: 'https://github.com/brenotoyo/Projeto-5---Lista-de-contatos',
@@ -28,7 +28,7 @@ export const projects = [
     title: 'efood',
     description: {
       span: 'Um cardário de restaurantes',
-      text: ' e seu principais pratos para pedido.',
+      text: ', e seu principais pratos para pedido.',
     },
     image: '/images/projects/efood.png',
     repoUrl: 'https://github.com/brenotoyo/efood',

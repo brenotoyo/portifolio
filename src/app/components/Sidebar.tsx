@@ -10,7 +10,7 @@ export default function Sidebar() {
   const toggleMenu = () => setIsOpen(!isOpen)
 
   return (
-    <div className="relative flex min-h-full w-full flex-col p-4 lg:p-12">
+    <div className="relative flex h-dvh w-full flex-col p-4 lg:p-12">
       {/* Overlay para fechar ao clicar fora */}
       {isOpen && (
         <div

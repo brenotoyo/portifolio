@@ -7,11 +7,11 @@ import Sidebar from './components/Sidebar'
 
 export default function Home() {
   return (
-    <div className="h-screen snap-y snap-mandatory overflow-y-auto scroll-smooth">
+    <div className="h-screen overflow-y-auto scroll-smooth lg:snap-y lg:snap-mandatory">
       {/* SEÇÃO INÍCIO */}
       <section
         id="inicio"
-        className="relative hidden h-screen w-full snap-start lg:block"
+        className="relative hidden h-dvh w-full snap-start lg:block"
       >
         <Image
           src="/images/capa.jpg"
@@ -60,14 +60,14 @@ export default function Home() {
       {/* SEÇÃO PROJETOS */}
       <section
         id="projetos"
-        className="h-screen w-full snap-start bg-zinc-800 p-4 lg:p-12"
+        className="min-h-dvh w-full snap-start bg-zinc-800 p-4 lg:p-12"
       >
         <SectionProjects />
       </section>
       {/* SEÇÃO TECNOLOGIAS */}
       <section
         id="tecnologias"
-        className="relative isolate h-screen w-full snap-start bg-white p-4 lg:p-12"
+        className="relative isolate min-h-dvh w-full snap-start bg-white p-4 lg:p-12"
       >
         <SectionTech />
         <div className="absolute inset-0 -z-10">
