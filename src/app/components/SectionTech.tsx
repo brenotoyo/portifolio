@@ -64,7 +64,11 @@ export default function SectionTecnologias() {
   })
 
   return (
-    <div className="relative w-full" ref={ref}>
+    <div
+      style={{ minHeight: 'var(--vh, 100vh)' }}
+      className="relative w-full"
+      ref={ref}
+    >
       {/* Título da Seção */}
       <h3 className="text-background mb-3 text-xs font-bold lg:mb-24 lg:text-xl">
         {/* Header com título e explicação sobre a seçaõ */}
@@ -101,7 +105,7 @@ export default function SectionTecnologias() {
       </div>
       {/* Explanação do uso das tecnologias */}
       {isInView && (
-        <div className="pointer-events-none absolute -bottom-20 left-1/2 w-full -translate-x-1/2 px-6 lg:-bottom-52 lg:max-w-3xl">
+        <div className="pointer-events-none absolute bottom-10 left-1/2 w-full -translate-x-1/2 px-6 lg:bottom-7 lg:max-w-3xl">
           <div
             role="status"
             aria-live="polite"

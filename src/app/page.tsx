@@ -7,11 +7,15 @@ import Sidebar from './components/Sidebar'
 
 export default function Home() {
   return (
-    <div className="h-dvh overflow-y-auto scroll-smooth lg:snap-y lg:snap-mandatory">
-      {/* SEÇÃO INÍCIO */}
+    <div
+      style={{ height: 'var(--vh, 100vh)' }}
+      className="overflow-y-auto scroll-smooth lg:snap-y lg:snap-mandatory"
+    >
+      {/* SEÇÃO INÍCIO - Desktop apenas */}
       <section
         id="inicio"
-        className="relative hidden h-full w-full snap-start lg:block"
+        className="relative hidden w-full snap-start lg:block"
+        style={{ height: 'var(--vh, 100vh)' }}
       >
         <Image
           src="/images/capa.jpg"
@@ -20,9 +24,7 @@ export default function Home() {
           priority
           className="object-cover"
         />
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/10 dark:bg-black/20" />
-        {/* SETA INDICADORA */}
         <div className="absolute bottom-10 left-14 flex -translate-x-1/2 flex-col items-center gap-2 text-white/70">
           <span className="text-[10px] font-medium tracking-[0.3em] uppercase">
             Scroll
@@ -32,20 +34,23 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* SEÇÃO SIDEBAR */}
+
+      {/* SEÇÃO SIDEBAR - Mobile apenas */}
       <section
         id="home"
-        className="bg-background block h-full w-full lg:hidden lg:snap-start"
+        className="bg-background block w-full lg:hidden lg:snap-start"
+        style={{ minHeight: 'var(--vh, 100vh)' }}
       >
         <Sidebar />
       </section>
+
       {/* SEÇÃO SOBRE */}
       <section
         id="sobre"
-        className="relative h-full w-full bg-white p-4 lg:isolate lg:snap-start lg:p-12"
+        className="relative isolate w-full bg-white p-4 lg:snap-start lg:p-12"
+        style={{ minHeight: 'var(--vh, 100vh)' }}
       >
         <SectionSobre />
-        {/* BACKGROUND IMAGE */}
         <div className="absolute inset-0 -z-10">
           <Image
             src="/images/background-remove.png"
@@ -60,14 +65,17 @@ export default function Home() {
       {/* SEÇÃO PROJETOS */}
       <section
         id="projetos"
-        className="h-full w-full bg-zinc-800 p-4 lg:snap-start lg:p-12"
+        className="w-full bg-zinc-800 p-4 lg:snap-start lg:p-12"
+        style={{ minHeight: 'var(--vh, 100vh)' }}
       >
         <SectionProjects />
       </section>
+
       {/* SEÇÃO TECNOLOGIAS */}
       <section
         id="tecnologias"
-        className="relative h-full w-full bg-white p-4 lg:isolate lg:snap-start lg:p-12"
+        className="relative isolate w-full bg-white p-4 lg:snap-start lg:p-12"
+        style={{ minHeight: 'var(--vh, 100vh)' }}
       >
         <SectionTech />
         <div className="absolute inset-0 -z-10">

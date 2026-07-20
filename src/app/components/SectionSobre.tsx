@@ -1,6 +1,9 @@
 export default function SectionSobre() {
   return (
-    <div className="relative flex h-dvh w-full flex-col">
+    <div
+      style={{ minHeight: 'var(--vh, 100vh)' }}
+      className="relative flex w-full flex-col"
+    >
       <h3 className="text-background mb-3 text-xs font-bold lg:mb-16 lg:text-xl">
         {/* Título da Seção */}
         &lt;SobreMim /&gt;

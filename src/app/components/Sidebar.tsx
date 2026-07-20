@@ -10,7 +10,10 @@ export default function Sidebar() {
   const toggleMenu = () => setIsOpen(!isOpen)
 
   return (
-    <div className="relative flex h-dvh w-full flex-col p-4 lg:p-12">
+    <div
+      style={{ height: 'var(--vh, 100vh)' }}
+      className="relative flex w-full flex-col p-4 lg:p-12"
+    >
       {/* Overlay para fechar ao clicar fora */}
       {isOpen && (
         <div
@@ -39,6 +42,7 @@ export default function Sidebar() {
           >
             {/* navegação inicio em desktop */}
             <button
+              type="button"
               onClick={() => {
                 document
                   .getElementById('inicio')
@@ -51,6 +55,7 @@ export default function Sidebar() {
             </button>
             {/* navegação inicio em mobile */}
             <button
+              type="button"
               onClick={() => {
                 document
                   .getElementById('home')
@@ -62,6 +67,7 @@ export default function Sidebar() {
               Inicío
             </button>
             <button
+              type="button"
               onClick={() => {
                 document
                   .getElementById('sobre')
@@ -73,6 +79,7 @@ export default function Sidebar() {
               Sobre
             </button>
             <button
+              type="button"
               onClick={() => {
                 document
                   .getElementById('projetos')
@@ -84,6 +91,7 @@ export default function Sidebar() {
               Projetos
             </button>
             <button
+              type="button"
               onClick={() => {
                 document
                   .getElementById('tecnologias')
