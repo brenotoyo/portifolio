@@ -60,6 +60,7 @@ export default function Home() {
       {/* SEÇÃO PROJETOS */}
       <section
         id="projetos"
+        style={{ minHeight: 'var(--vh)' }}
         className="min-h-dvh w-full snap-start bg-zinc-800 p-4 lg:p-12"
       >
         <SectionProjects />
