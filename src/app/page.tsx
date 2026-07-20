@@ -7,7 +7,7 @@ import Sidebar from './components/Sidebar'
 
 export default function Home() {
   return (
-    <div className="h-screen overflow-y-auto scroll-smooth lg:snap-y lg:snap-mandatory">
+    <div className="h-dvh overflow-y-auto scroll-smooth lg:snap-y lg:snap-mandatory">
       {/* SEÇÃO INÍCIO */}
       <section
         id="inicio"
