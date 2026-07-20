@@ -1,7 +1,7 @@
 export default function SectionSobre() {
   return (
     <div
-      style={{ minHeight: 'var(--vh, 100vh)' }}
+      style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
       className="relative flex w-full flex-col"
     >
       <h3 className="text-background mb-3 text-xs font-bold lg:mb-16 lg:text-xl">

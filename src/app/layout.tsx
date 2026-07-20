@@ -23,14 +23,14 @@ export default function RootLayout({
           <aside className="bg-background w-1/2 border-r border-zinc-800">
             <Sidebar />
           </aside>
-          <main className="w-1/2 overflow-y-auto">{children}</main>
+          <main className="h-full w-1/2 overflow-y-auto">{children}</main>
         </div>
         {/* Mobile: sidebar como section rolável + conteúdo embaixo */}
         <div
           className="w-full lg:hidden"
           style={{ height: 'var(--vh, 100vh)' }}
         >
-          <main className="h-full w-full">{children}</main>
+          <main className="h-full w-full overflow-y-auto">{children}</main>
         </div>
       </body>
     </html>

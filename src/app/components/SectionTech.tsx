@@ -65,7 +65,7 @@ export default function SectionTecnologias() {
 
   return (
     <div
-      style={{ minHeight: 'var(--vh, 100vh)' }}
+      style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
       className="relative w-full"
       ref={ref}
     >
@@ -105,7 +105,7 @@ export default function SectionTecnologias() {
       </div>
       {/* Explanação do uso das tecnologias */}
       {isInView && (
-        <div className="pointer-events-none absolute bottom-10 left-1/2 w-full -translate-x-1/2 px-6 lg:bottom-7 lg:max-w-3xl">
+        <div className="pointer-events-none absolute -bottom-5 left-1/2 w-[min(100%,1024px)] -translate-x-1/2 transform px-6 lg:-bottom-24 lg:max-w-3xl">
           <div
             role="status"
             aria-live="polite"

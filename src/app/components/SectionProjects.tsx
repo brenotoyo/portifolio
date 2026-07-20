@@ -3,7 +3,10 @@ import ProjectCard from './ProjectCard'
 
 export default function SectionProjects() {
   return (
-    <div style={{ minHeight: 'var(--vh, 100vh)' }} className="w-full">
+    <div
+      style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
+      className="w-full"
+    >
       <h3 className="mb-3 text-xs font-bold text-white lg:mb-24 lg:text-xl">
         &lt;Projetos /&gt;
       </h3>
