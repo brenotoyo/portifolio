@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Sidebar from '@/src/app/components/Sidebar'
 import UseViewportHeight from '@/src/app/components/UseViewportHeight' // Importe o novo componente
 import './globals.css'
@@ -6,7 +6,13 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Portfólio - Breno Kazuo',
   description: 'Portfólio de Breno Kazuo',
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1, // Opcional: evita zoom automático em inputs no iPhone
+  userScalable: false, // Opcional: evita que o usuário mude o zoom manualmente
 }
 
 export default function RootLayout({
