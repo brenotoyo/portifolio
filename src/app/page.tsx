@@ -42,7 +42,7 @@ export default function Home() {
       {/* SEÇÃO SOBRE */}
       <section
         id="sobre"
-        className="relative isolate h-full w-full bg-white p-4 lg:snap-start lg:p-12"
+        className="relative h-full w-full bg-white p-4 lg:isolate lg:snap-start lg:p-12"
       >
         <SectionSobre />
         {/* BACKGROUND IMAGE */}
@@ -67,7 +67,7 @@ export default function Home() {
       {/* SEÇÃO TECNOLOGIAS */}
       <section
         id="tecnologias"
-        className="relative isolate h-full w-full bg-white p-4 lg:snap-start lg:p-12"
+        className="relative h-full w-full bg-white p-4 lg:isolate lg:snap-start lg:p-12"
       >
         <SectionTech />
         <div className="absolute inset-0 -z-10">
