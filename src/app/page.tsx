@@ -11,7 +11,7 @@ export default function Home() {
       {/* SEÇÃO INÍCIO */}
       <section
         id="inicio"
-        className="relative hidden h-dvh w-full snap-start lg:block"
+        className="relative hidden h-full w-full snap-start lg:block"
       >
         <Image
           src="/images/capa.jpg"
@@ -35,14 +35,14 @@ export default function Home() {
       {/* SEÇÃO SIDEBAR */}
       <section
         id="home"
-        className="bg-background block min-h-dvh w-full snap-start lg:hidden"
+        className="bg-background block h-full w-full lg:hidden lg:snap-start"
       >
         <Sidebar />
       </section>
       {/* SEÇÃO SOBRE */}
       <section
         id="sobre"
-        className="relative isolate min-h-dvh w-full snap-start bg-white p-4 lg:p-12"
+        className="relative isolate h-full w-full bg-white p-4 lg:snap-start lg:p-12"
       >
         <SectionSobre />
         {/* BACKGROUND IMAGE */}
@@ -60,15 +60,14 @@ export default function Home() {
       {/* SEÇÃO PROJETOS */}
       <section
         id="projetos"
-        style={{ minHeight: 'var(--vh)' }}
-        className="min-h-dvh w-full snap-start bg-zinc-800 p-4 lg:p-12"
+        className="h-full w-full bg-zinc-800 p-4 lg:snap-start lg:p-12"
       >
         <SectionProjects />
       </section>
       {/* SEÇÃO TECNOLOGIAS */}
       <section
         id="tecnologias"
-        className="relative isolate min-h-dvh w-full snap-start bg-white p-4 lg:p-12"
+        className="relative isolate h-full w-full bg-white p-4 lg:snap-start lg:p-12"
       >
         <SectionTech />
         <div className="absolute inset-0 -z-10">
