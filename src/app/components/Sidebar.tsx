@@ -55,7 +55,8 @@ export default function Sidebar() {
                   const isMobile = window.innerWidth < 1024
                   const targetId =
                     isMobile && item.mobileId ? item.mobileId : item.id
-                  const element = document.getElementById(targetId)
+                  const elements = document.querySelectorAll(`#${targetId}`)
+                  const element = elements[elements.length - 1]
 
                   if (element) {
                     // Usa scrollIntoView com fallback para scrollTo no container
@@ -63,6 +64,7 @@ export default function Sidebar() {
                       behavior: 'smooth',
                       block: 'start',
                     })
+                    setTimeout(() => setIsOpen(false), 300)
                     // Fecha o menu
                     setIsOpen(false)
                   } else {
@@ -82,7 +84,7 @@ export default function Sidebar() {
       </AnimatePresence>
       {/* Conteúdo Principal (Texto) */}
       <div
-        className={`transition-opacity duration-300 ${isOpen ? 'pointer-events-none opacity-20' : 'opacity-100'} mt-24 lg:mt-44`}
+        className={`transition-opacity duration-300 ${isOpen ? 'pointer-events-none opacity-20' : 'opacity-100'} mt-24 md:mt-44`}
       >
         <h1 className="text-4xl font-bold tracking-tight">
           Olá! Me chamo Breno Kazuo e tenho 25 anos.
@@ -99,12 +101,7 @@ export default function Sidebar() {
           className="mt-12 flex w-fit gap-2 rounded-full border-2 border-white px-5 py-2 transition-all hover:bg-white hover:text-black"
         >
           Baixar Currículo
-          <Image
-            src="/images/icons/pdf.svg"
-            alt="Github"
-            width={22}
-            height={22}
-          />
+          <Image src="/images/icons/pdf.svg" alt="PDF" width={22} height={22} />
         </a>
       </div>
 

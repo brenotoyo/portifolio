@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className="scroll-smooth">
-      <body className="overflow-auto">
+      <body className="overflow-hidden">
         {/* Ativa o cálculo da altura logo no início */}
         <UseViewportHeight />
         {/* Desktop: sidebar fixo + conteúdo rolável */}
@@ -37,7 +37,7 @@ export default function RootLayout({
           className="w-full lg:hidden"
           style={{ height: 'var(--vh, 100vh)' }}
         >
-          <main className="h-full w-full overflow-y-auto">{children}</main>
+          <main className="h-full w-full overflow-hidden">{children}</main>
         </div>
       </body>
     </html>

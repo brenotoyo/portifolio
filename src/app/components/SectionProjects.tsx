@@ -1,4 +1,4 @@
-import { projects } from './project-data'
+import { projects } from './mocks/project-data'
 import ProjectCard from './ProjectCard'
 
 export default function SectionProjects() {

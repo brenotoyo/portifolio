@@ -9,12 +9,12 @@ export default function Home() {
   return (
     <div
       style={{ height: 'var(--vh, 100vh)' }}
-      className="scroll-smooth lg:snap-y lg:snap-mandatory"
+      className="snap-y snap-mandatory overflow-y-auto scroll-smooth"
     >
       {/* SEÇÃO INÍCIO - Desktop apenas */}
       <section
         id="inicio"
-        className="relative hidden w-full snap-start lg:block"
+        className="relative hidden w-full lg:block lg:snap-start"
         style={{ height: 'var(--vh, 100vh)' }}
       >
         <Image
@@ -38,7 +38,7 @@ export default function Home() {
       {/* SEÇÃO SIDEBAR - Mobile e Tablet */}
       <section
         id="home"
-        className="bg-background block w-full lg:hidden lg:snap-start"
+        className="bg-background w-full lg:hidden lg:snap-start"
         style={{ minHeight: 'var(--vh, 100vh)' }}
       >
         <Sidebar />

@@ -4,7 +4,7 @@
 import Image from 'next/image'
 import { useRef, useState } from 'react'
 import { useInView } from 'framer-motion'
-import { LANGUAGES, FRAMEWORKS, TOOLS, type Tech } from './tech-data'
+import { LANGUAGES, FRAMEWORKS, TOOLS, type Tech } from './mocks/tech-data'
 
 /* Categoria que lista as tecnologias */
 function CategoryLine({
