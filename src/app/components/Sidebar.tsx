@@ -35,73 +35,48 @@ export default function Sidebar() {
       <AnimatePresence>
         {isOpen && (
           <motion.nav
+            id="site-nav"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             className="absolute top-24 z-40 flex flex-col gap-2 lg:top-24 lg:left-12 lg:mt-6"
           >
-            {/* navegação inicio em desktop */}
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById('inicio')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-                setIsOpen(false)
-              }}
-              className="hover:text-primary hidden text-left text-2xl font-medium transition-colors lg:block"
-            >
-              Inicío
-            </button>
-            {/* navegação inicio em mobile */}
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById('home')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-                setIsOpen(false)
-              }}
-              className="hover:text-primary block text-left text-2xl font-medium transition-colors lg:hidden"
-            >
-              Inicío
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById('sobre')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-                setIsOpen(false)
-              }}
-              className="hover:text-primary text-left text-2xl font-medium transition-colors"
-            >
-              Sobre
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById('projetos')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-                setIsOpen(false)
-              }}
-              className="hover:text-primary text-left text-2xl font-medium transition-colors"
-            >
-              Projetos
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                document
-                  .getElementById('tecnologias')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-                setIsOpen(false)
-              }}
-              className="hover:text-primary text-left text-2xl font-medium transition-colors"
-            >
-              Tecnologias
-            </button>
+            {[
+              { label: 'Início', id: 'inicio', mobileId: 'home' },
+              { label: 'Sobre', id: 'sobre' },
+              { label: 'Projetos', id: 'projetos' },
+              { label: 'Tecnologias', id: 'tecnologias' },
+            ].map((item) => (
+              <button
+                key={item.label}
+                type="button"
+                onClick={() => {
+                  // Determina o id correto com base no breakpoint
+                  const isMobile = window.innerWidth < 1024
+                  const targetId =
+                    isMobile && item.mobileId ? item.mobileId : item.id
+                  const element = document.getElementById(targetId)
+
+                  if (element) {
+                    // Usa scrollIntoView com fallback para scrollTo no container
+                    element.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    })
+                    // Fecha o menu
+                    setIsOpen(false)
+                  } else {
+                    console.warn(
+                      `Elemento com id "${targetId}" não encontrado.`,
+                    )
+                    setIsOpen(false)
+                  }
+                }}
+                className="hover:text-primary text-left text-2xl font-medium transition-colors"
+              >
+                {item.label}
+              </button>
+            ))}
           </motion.nav>
         )}
       </AnimatePresence>

@@ -23,7 +23,8 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="scroll-smooth">
       <body className="overflow-auto">
-        <UseViewportHeight /> {/* Ativa o cálculo da altura logo no início */}
+        {/* Ativa o cálculo da altura logo no início */}
+        <UseViewportHeight />
         {/* Desktop: sidebar fixo + conteúdo rolável */}
         <div className="hidden h-screen w-full lg:flex">
           <aside className="bg-background w-1/2 border-r border-zinc-800">

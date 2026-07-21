@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div
       style={{ height: 'var(--vh, 100vh)' }}
-      className="overflow-y-auto scroll-smooth lg:snap-y lg:snap-mandatory"
+      className="scroll-smooth lg:snap-y lg:snap-mandatory"
     >
       {/* SEÇÃO INÍCIO - Desktop apenas */}
       <section
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SEÇÃO SIDEBAR - Mobile apenas */}
+      {/* SEÇÃO SIDEBAR - Mobile e Tablet */}
       <section
         id="home"
         className="bg-background block w-full lg:hidden lg:snap-start"
@@ -47,7 +47,7 @@ export default function Home() {
       {/* SEÇÃO SOBRE */}
       <section
         id="sobre"
-        className="relative isolate w-full bg-white p-4 lg:snap-start lg:p-12"
+        className="relative isolate w-full bg-white p-4 md:p-8 lg:snap-start lg:p-12"
         style={{ minHeight: 'var(--vh, 100vh)' }}
       >
         <SectionSobre />
@@ -65,7 +65,7 @@ export default function Home() {
       {/* SEÇÃO PROJETOS */}
       <section
         id="projetos"
-        className="w-full bg-zinc-800 p-4 lg:snap-start lg:p-12"
+        className="w-full bg-zinc-800 p-4 md:p-8 lg:snap-start lg:p-12"
         style={{ minHeight: 'var(--vh, 100vh)' }}
       >
         <SectionProjects />
@@ -74,7 +74,7 @@ export default function Home() {
       {/* SEÇÃO TECNOLOGIAS */}
       <section
         id="tecnologias"
-        className="relative isolate w-full bg-white p-4 lg:snap-start lg:p-12"
+        className="relative isolate w-full bg-white p-4 md:p-8 lg:snap-start lg:p-12"
         style={{ minHeight: 'var(--vh, 100vh)' }}
       >
         <SectionTech />

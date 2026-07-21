@@ -70,15 +70,15 @@ export default function SectionTecnologias() {
       ref={ref}
     >
       {/* Título da Seção */}
-      <h3 className="text-background mb-3 text-xs font-bold lg:mb-24 lg:text-xl">
+      <h3 className="text-background mb-3 text-xs font-bold md:text-sm lg:mb-24 lg:text-xl">
         {/* Header com título e explicação sobre a seçaõ */}
         &lt;Tecnologias /&gt;
       </h3>
-      <header className="mb-6 text-center lg:mb-12">
-        <h2 className="text-background mb-2 text-2xl font-bold lg:mb-5 lg:text-start lg:text-4xl">
+      <header className="mb-6 text-center md:mb-10 lg:mb-12 lg:text-start">
+        <h2 className="text-background mb-2 text-2xl font-bold md:text-3xl lg:mb-5 lg:text-4xl">
           Hard Skills
         </h2>
-        <p className="max-w-2xl text-sm text-zinc-400 lg:text-start lg:text-base">
+        <p className="mx-auto max-w-2xl text-sm text-zinc-400 md:max-w-3xl md:text-base lg:mx-0">
           Linguagens, frameworks e ferramentas que tenho conhecimento e já
           utilizei em alguma aplicação.
         </p>
@@ -105,7 +105,7 @@ export default function SectionTecnologias() {
       </div>
       {/* Explanação do uso das tecnologias */}
       {isInView && (
-        <div className="pointer-events-none absolute bottom-3 left-1/2 w-[min(100%,1024px)] -translate-x-1/2 transform px-6 lg:-bottom-24 lg:max-w-3xl">
+        <div className="pointer-events-none absolute bottom-3 left-1/2 w-[min(100%,1024px)] -translate-x-1/2 transform px-6 md:-bottom-20 lg:-bottom-24 lg:max-w-3xl">
           <div
             role="status"
             aria-live="polite"
@@ -121,8 +121,8 @@ export default function SectionTecnologias() {
               </p>
             ) : (
               <p className="flex justify-center gap-1 text-xs text-zinc-400 lg:text-base">
-                <span className="hidden lg:block">Passe o mouse sobre</span>
-                <span className="lg:hidden">Aperte</span> uma tecnologia para
+                <span className="hidden lg:inline">Passe o mouse sobre</span>
+                <span className="lg:hidden">Aperte</span>uma tecnologia para
                 saber mais.
               </p>
             )}
